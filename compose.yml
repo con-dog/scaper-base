@@ -1,0 +1,6 @@
+services:
+  scraper:
+    build:
+      context: ./scraper
+      target: prod
+    image: scraper:prod

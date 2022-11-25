@@ -1,0 +1,11 @@
+services:
+  scraper:
+    build:
+      context: ./scraper
+      target: dev
+    image: scraper:dev
+    stdin_open: true
+    tty: true
+    volumes:
+      - ./scraper/app:/usr/src/app
+      - ./scraper/requirements.txt:/usr/src/requirements.txt
